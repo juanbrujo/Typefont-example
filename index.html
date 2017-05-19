@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Typefont</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <style>body{font-family: 'Lora', serif;}</style>
+</head>
+<body>
+  
+  <h1>Test Typefont</h1>
+  <p>Open the console and wait a bit.</p>
+  <p><img src="foooont.jpg"></p>
+  <p><a href="https://github.com/Sirvasile/Typefont">GitHub</a></p>
+
+  <script src="js/babel-browser-build.js"></script>
+  <script src="js/browser-es-module-loader.js"></script>
+  <script src='//cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+  <script src="//cdn.rawgit.com/oliver-moran/jimp/v0.2.27/browser/lib/jimp.min.js"></script>
+  <script type="module" src="src/index.js"></script>
+  <script type="module">
+    import {Typefont} from "./src/index.js";
+    Typefont("foooont.jpg").then((res) => console.table(res));
+  </script>
+</body>
+</html>
